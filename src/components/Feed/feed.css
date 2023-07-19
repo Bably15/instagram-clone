@@ -1,0 +1,21 @@
+.user {
+    display: flex;
+    align-items: center;
+}
+.user__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.user__profile--image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    padding: 20px;
+}
+.user__upload--time {
+    margin-left: 10px;
+}
+.feed__image {
+    height: 500px;
+}
