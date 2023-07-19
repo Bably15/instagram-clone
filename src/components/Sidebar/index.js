@@ -1,13 +1,16 @@
 import logo from "../../assets/images/logo.png";
 import "./sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import {
-    faHouse,
-    faSearch,
-    faCompass,
-    faHeart,
-    faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+    faHeart as regularHeart,
+    faCompass as regularCompass,
+    faPaperPlane as regularPaperPlane,
+    faSquarePlus as regularSquarePlus,
+} from "@fortawesome/free-regular-svg-icons";
+// import { } from "@fortawesome/free-regular-svg-icons";
+import pfp from "../../assets/images/pfp.jpg";
+
 const Sidebar = () => {
     const sidebarItems = [
         {
@@ -15,31 +18,31 @@ const Sidebar = () => {
             title: "Home",
         },
         {
-            icon: faSearch,
+            icon: regularHeart,
             title: "Search",
         },
         {
-            icon: faCompass,
+            icon: regularCompass,
             title: "Explore",
         },
         {
-            icon: faHouse,
+            icon: regularHeart,
             title: "Reels",
         },
         {
-            icon: faPaperPlane,
+            icon: regularPaperPlane,
             title: "Messages",
         },
         {
-            icon: faHeart,
+            icon: regularHeart,
             title: "Notifications",
         },
         {
-            icon: faHouse,
+            icon: regularSquarePlus,
             title: "Create",
         },
         {
-            icon: faHouse,
+            icon: pfp,
             title: "Profile",
         },
     ];
@@ -52,7 +55,10 @@ const Sidebar = () => {
                 {sidebarItems.map((item) => (
                     <ul className="sidebar__items">
                         <li>
-                            <FontAwesomeIcon icon={item.icon} />
+                            <FontAwesomeIcon
+                                icon={item.icon}
+                                className="sidebar__items--icons"
+                            />
                             <span className="sidebar--title">
                                 {" "}
                                 {item.title}

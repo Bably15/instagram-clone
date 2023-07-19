@@ -2,52 +2,37 @@ import pfp from "../../assets/images/pfp.jpg";
 import "./feed.css";
 import dog from "../../assets/images/dog.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FeedItem from "./FeedItem";
 import {
     faHeart,
     faComment,
     faPaperPlane,
+    faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Feed = () => {
-    const feedItem = [
+    const feedItemList = [
         {
             profilePicture: pfp,
             username: "barbieofficial",
             image: dog,
+            time: "1h",
+            likeCount: "31 likes",
+            // options: { faEllipsis },
         },
     ];
     return (
         <div>
-            <div className="user">
-                <div className="user__info">
-                    <div>
-                        {/* <img
-                            src={}
-                            alt=""
-                            className="user__profile--image"
-                        /> */}
-                    </div>
-                    {/* <div className="user__name">{feedItem.username}</div> */}
-                    <div className="user__upload--time">
-                        <span>1h</span>
-                    </div>
-                </div>
-            </div>
+            <FeedItem userInfo={feedItemList} />
 
-            <img src={feedItem.image} alt="" className="feed__image" />
             <div>
-                <div>
-                    <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
-                    <FontAwesomeIcon
-                        icon={faComment}
-                        style={{ color: "#000000" }}
-                    />
-                    <FontAwesomeIcon icon={faPaperPlane}></FontAwesomeIcon>
-                </div>
-                <a href="#likes">31 likes</a>
-                <span></span>
+                <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
+                <FontAwesomeIcon
+                    icon={faComment}
+                    style={{ color: "#000000" }}
+                />
+                <FontAwesomeIcon icon={faPaperPlane}></FontAwesomeIcon>
             </div>
-            <h3>jkspet</h3>
         </div>
     );
 };

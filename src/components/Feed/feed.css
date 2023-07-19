@@ -7,15 +7,21 @@
     align-items: center;
     justify-content: space-around;
 }
-.user__profile--image {
+.feed__item--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user__profile-picture {
     height: 50px;
     width: 50px;
     border-radius: 50px;
-    padding: 20px;
+    margin: 10px;
 }
-.user__upload--time {
-    margin-left: 10px;
+.feed__item--header--items {
+    display: flex;
+    align-items: center;
 }
-.feed__image {
-    height: 500px;
+.header__span {
+    margin-right: 10px;
 }
