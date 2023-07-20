@@ -1,0 +1,8 @@
+.profile__bar {
+    padding: 10%;
+}
+.profile-picture {
+    height: 40px;
+    width: 40px;
+    border-radius: 60px 60px;
+}

@@ -1,6 +1,10 @@
+import Profile from "../Profile";
 const Suggestions = () => {
     return (
         <div>
+            <div>
+                <Profile />
+            </div>
             <ul>
                 <li>
                     <h2>ujhgj</h2>

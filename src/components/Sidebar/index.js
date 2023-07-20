@@ -1,25 +1,27 @@
 import logo from "../../assets/images/logo.png";
 import "./sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import {
     faHeart as regularHeart,
     faCompass as regularCompass,
     faPaperPlane as regularPaperPlane,
     faSquarePlus as regularSquarePlus,
+    // faMagnifyingGlass as regularMagnifyingGlass,
 } from "@fortawesome/free-regular-svg-icons";
-// import { } from "@fortawesome/free-regular-svg-icons";
-import pfp from "../../assets/images/pfp.jpg";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     const sidebarItems = [
         {
             icon: faHouse,
             title: "Home",
+            path: "/home",
         },
         {
-            icon: regularHeart,
+            icon: faMagnifyingGlass,
             title: "Search",
+            path: "/search",
         },
         {
             icon: regularCompass,
@@ -42,8 +44,9 @@ const Sidebar = () => {
             title: "Create",
         },
         {
-            icon: pfp,
+            icon: faHouse,
             title: "Profile",
+            path: "/profile",
         },
     ];
     return (
@@ -53,18 +56,27 @@ const Sidebar = () => {
             </a>
             <div>
                 {sidebarItems.map((item) => (
-                    <ul className="sidebar__items">
-                        <li>
-                            <FontAwesomeIcon
-                                icon={item.icon}
-                                className="sidebar__items--icons"
-                            />
-                            <span className="sidebar--title">
-                                {" "}
-                                {item.title}
-                            </span>
-                        </li>
-                    </ul>
+                    <Link
+                        to={item.path}
+                        style={{
+                            textDecoration: "none",
+                            color: "black",
+                            /* Add any other custom styles you want here */
+                        }}
+                    >
+                        <ul className="sidebar__items">
+                            <li>
+                                <FontAwesomeIcon
+                                    icon={item.icon}
+                                    className="sidebar__items--icons"
+                                />
+                                <span className="sidebar--title">
+                                    {" "}
+                                    {item.title}
+                                </span>
+                            </li>
+                        </ul>
+                    </Link>
                 ))}
             </div>
         </div>
