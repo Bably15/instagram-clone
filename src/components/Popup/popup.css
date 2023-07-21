@@ -1,0 +1,11 @@
+.btn {
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+}
+.btn:last-child {
+    border-bottom: none;
+}
+.close-button {
+    margin-left: 90%;
+}

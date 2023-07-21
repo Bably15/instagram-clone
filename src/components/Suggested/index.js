@@ -1,10 +1,8 @@
-import Profile from "../Profile";
+import Profile from "../../pages/Profile";
 const Suggestions = () => {
     return (
         <div>
-            <div>
-                <Profile />
-            </div>
+            <div>{/* <Profile /> */}</div>
             <ul>
                 <li>
                     <h2>ujhgj</h2>

@@ -48,7 +48,7 @@ const Stories = () => {
             {carouselItems.map((item) => (
                 <div className="stories--items">
                     <img src={item.image} alt="" className="profile-picture" />
-                    <h3 className="username">{item.username}</h3>
+                    <h3 className="stories__username">{item.username}</h3>
                 </div>
             ))}
         </div>

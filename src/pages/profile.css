@@ -1,0 +1,40 @@
+.profile__bar {
+    padding: 10%;
+}
+.profile__header--userInfo--picture {
+    height: 150px;
+    width: 150px;
+    border-radius: 80px 80px;
+    margin-right: 50px;
+}
+.profile__header {
+    align-items: center;
+}
+.profile__header--userInfo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.profile__header span {
+    margin-right: 20px;
+}
+.profile__header--button {
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    background-color: rgb(239, 239, 239);
+}
+.header__info {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.highlight__icon {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px solid #c7c6c6;
+    border-radius: 50px;
+    color: #c7c6c6;
+}

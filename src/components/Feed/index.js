@@ -7,31 +7,35 @@ import {
     faHeart,
     faComment,
     faPaperPlane,
-} from "@fortawesome/free-solid-svg-icons";
+    faBookmark,
+} from "@fortawesome/free-regular-svg-icons";
 
 const Feed = () => {
     const feedItemList = [
         {
             profilePicture: pfp,
             username: "barbieofficial",
-            image: dog,
+            image: pfp,
             time: "1h",
             likeCount: "31 likes",
-            // options: { faEllipsis },
+            caption: "hi this is a caption",
+            icon: [faHeart, faComment, faPaperPlane, faBookmark],
         },
+        // {
+        //     profilePicture: pfp,
+        //     username: "barbieofficial",
+        //     image: pfp,
+        //     time: "1h",
+        //     likeCount: "31 likes",
+        //     caption: "hi this is a caption",
+        //     icon: [faHeart, faComment, faPaperPlane, faBookmark],
+        // },
     ];
     return (
         <div>
             <FeedItem userInfo={feedItemList} />
 
-            <div>
-                <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
-                <FontAwesomeIcon
-                    icon={faComment}
-                    style={{ color: "#000000" }}
-                />
-                <FontAwesomeIcon icon={faPaperPlane}></FontAwesomeIcon>
-            </div>
+            <div></div>
         </div>
     );
 };

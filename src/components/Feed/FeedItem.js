@@ -1,9 +1,11 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEllipsis } from "@fortawesome/free-regular-svg-icons";
-import Popup from "./Popup";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsis, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import Popup from "../Popup/index";
 const FeedItem = ({ userInfo }) => {
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
     const handleOnClick = () => {
-        <Popup />;
+        setIsMenuVisible(!isMenuVisible);
     };
     return (
         <div>
@@ -24,12 +26,47 @@ const FeedItem = ({ userInfo }) => {
                         </div>
                         <div>
                             <button onClick={handleOnClick}>
-                                {/* <FontAwesomeIcon icon={faEllipsis} /> */}
+                                <FontAwesomeIcon icon={faEllipsis} />
                             </button>
+                            {isMenuVisible && <Popup />}
                         </div>
                     </div>
                     <div>
                         <img src={item.image} alt={item.image} />
+                    </div>
+                    <div className="feed__item--footer">
+                        <div className="feed__item--footer--icons">
+                            <div>
+                                <span>
+                                    <FontAwesomeIcon icon={item.icon[0]} />
+                                </span>
+                                <span>
+                                    {" "}
+                                    <FontAwesomeIcon icon={item.icon[1]} />
+                                </span>
+                                <span>
+                                    {" "}
+                                    <FontAwesomeIcon icon={item.icon[2]} />
+                                </span>
+                            </div>
+                            <div>
+                                {" "}
+                                <FontAwesomeIcon icon={item.icon[3]} />
+                            </div>
+                        </div>
+                        <div> {item.likeCount} </div>
+                        <div>
+                            <p>
+                                <a href="#username" className="username">
+                                    {item.username}
+                                </a>
+                                <span> {item.caption}</span>
+                            </p>
+                            <textarea
+                                placeholder="Add a comment..."
+                                className="comment-area"
+                            ></textarea>
+                        </div>
                     </div>
                 </div>
             ))}

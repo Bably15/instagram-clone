@@ -7,10 +7,36 @@
     align-items: center;
     justify-content: space-around;
 }
+.feed__item {
+    background-color: rgb(255, 255, 255);
+}
 .feed__item--header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.feed__item--footer {
+    text-align: start;
+    margin-top: 20px;
+}
+.feed__item--footer--icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* font-size: 10px; */
+}
+.feed__item--footer--icons svg {
+    font-size: 20px;
+}
+.feed__item--footer--icons span {
+    margin-right: 10px;
+}
+
+.username {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: medium;
 }
 .user__profile-picture {
     height: 50px;
@@ -24,4 +50,10 @@
 }
 .header__span {
     margin-right: 10px;
+}
+.comment-area {
+    border: none;
+}
+.comment-area:focus {
+    outline: none;
 }

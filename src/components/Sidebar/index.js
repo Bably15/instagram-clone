@@ -42,6 +42,7 @@ const Sidebar = () => {
         {
             icon: regularSquarePlus,
             title: "Create",
+            path: "/create",
         },
         {
             icon: faHouse,
