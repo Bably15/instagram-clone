@@ -1,24 +1,16 @@
 import "./popup.css";
-
-const Popup = () => {
-    const handleModelOutsideClick = () => {
-        console.log("HANDLE MODEL OUTSIDE CLICK");
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+const Popup = ({ setIsMenuVisible }) => {
+    const handleClosePopup = () => {
+        setIsMenuVisible(false);
     };
-
     return (
-        <div
-            onClick={handleModelOutsideClick}
-            style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100vw",
-                height: "100vh",
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                display: "flex",
-                alignItems: "center",
-            }}
-        >
+        <div className="popup__menu">
+            <div className="close__icon">
+                <FontAwesomeIcon icon={faXmark} onClick={handleClosePopup} />
+            </div>
+
             <div
                 style={{
                     backgroundColor: "#fff",

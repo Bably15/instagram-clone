@@ -7,11 +7,11 @@ import "./homepage.css";
 const Homepage = () => {
     return (
         <div className="homepage">
-            <div>
+            <div className="homepage__mainFeed">
                 <Stories />
                 <Feed />
             </div>
-            <div>
+            <div className="homepage__suggestions">
                 <Suggestions />
             </div>
         </div>

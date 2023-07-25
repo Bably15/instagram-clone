@@ -1,7 +1,8 @@
-import Lily from "../assets/images/Lily.jpeg";
+import profile from "../constants/profile";
 import "./profile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faPlus } from "@fortawesome/free-solid-svg-icons";
+import Posts from "../components/Posts/index";
 const Profile = () => {
     return (
         <div className="profile">
@@ -9,14 +10,14 @@ const Profile = () => {
                 <div className="profile__header--userInfo">
                     <div>
                         <img
-                            src={Lily}
+                            src={profile.picture}
                             alt=""
                             className="profile__header--userInfo--picture"
                         />
                     </div>
 
                     <div>
-                        <span>username</span>
+                        <span>{profile.username}</span>
                         <span>
                             <button className="profile__header--button">
                                 Edit Profile
@@ -60,7 +61,9 @@ const Profile = () => {
                     />
                     <h3>New</h3>
                 </div>
-                <hr></hr>
+                <div>
+                    <Posts />
+                </div>
             </div>
         </div>
     );

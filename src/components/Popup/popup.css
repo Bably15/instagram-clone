@@ -1,3 +1,19 @@
+.popup__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+.close__icon {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    font-size: 2rem;
+}
 .btn {
     padding: 20px;
     border: none;
@@ -5,7 +21,4 @@
 }
 .btn:last-child {
     border-bottom: none;
-}
-.close-button {
-    margin-left: 90%;
 }

@@ -1,4 +1,5 @@
 import logo from "../../assets/images/logo.png";
+import Lily from "../../assets/images/Lily.jpeg";
 import "./sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +8,7 @@ import {
     faCompass as regularCompass,
     faPaperPlane as regularPaperPlane,
     faSquarePlus as regularSquarePlus,
+    faUser as regularUser,
     // faMagnifyingGlass as regularMagnifyingGlass,
 } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
@@ -45,7 +47,7 @@ const Sidebar = () => {
             path: "/create",
         },
         {
-            icon: faHouse,
+            icon: regularUser,
             title: "Profile",
             path: "/profile",
         },

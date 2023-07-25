@@ -1,0 +1,25 @@
+.profiles__sidebar {
+    margin: 10%;
+}
+.profiles__sidebar--user {
+    display: flex;
+    justify-content: space-around;
+}
+.profiles__sidebar--user--info {
+    display: flex;
+    align-items: center;
+}
+.profiles__sidebar--title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.suggestions__bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.suggestions__bar--user--info {
+    display: flex;
+    align-items: center;
+}

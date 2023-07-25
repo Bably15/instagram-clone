@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsis, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import Popup from "../Popup/index";
 const FeedItem = ({ userInfo }) => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -8,7 +8,7 @@ const FeedItem = ({ userInfo }) => {
         setIsMenuVisible(!isMenuVisible);
     };
     return (
-        <div>
+        <div className="feed">
             {userInfo.map((item, index) => (
                 <div className="feed__item" key={index}>
                     <div className="feed__item--header">
@@ -25,10 +25,14 @@ const FeedItem = ({ userInfo }) => {
                             <span>{item.time}</span>
                         </div>
                         <div>
-                            <button onClick={handleOnClick}>
-                                <FontAwesomeIcon icon={faEllipsis} />
-                            </button>
-                            {isMenuVisible && <Popup />}
+                            <FontAwesomeIcon
+                                icon={faEllipsis}
+                                onClick={handleOnClick}
+                            />
+
+                            {isMenuVisible && (
+                                <Popup setIsMenuVisible={setIsMenuVisible} />
+                            )}
                         </div>
                     </div>
                     <div>

@@ -1,6 +1,6 @@
 import pfp from "../../assets/images/users/pfp.jpg";
 import "./feed.css";
-import dog from "../../assets/images/dog.jpeg";
+// import dog from "../../assets/images/dog.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FeedItem from "./FeedItem";
 import {

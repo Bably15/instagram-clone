@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: space-around;
 }
+.feed {
+    display: flex;
+    justify-content: center;
+}
 .feed__item {
     background-color: rgb(255, 255, 255);
 }
@@ -39,8 +43,8 @@
     font-size: medium;
 }
 .user__profile-picture {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50px;
     margin: 10px;
 }

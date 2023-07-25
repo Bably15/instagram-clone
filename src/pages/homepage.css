@@ -1,6 +1,9 @@
 .homepage {
     display: flex;
-    flex: 1;
-
-    justify-content: space-around;
+}
+.homepage__mainFeed {
+    width: 70%;
+}
+.homepage__suggestions {
+    width: 30%;
 }
