@@ -1,0 +1,41 @@
+.highlight__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.highlight__box {
+    background-color: white;
+    /* padding: 1rem; */
+    border-radius: 20px;
+    width: 30%;
+}
+.higlight__heading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(213, 210, 210);
+}
+.higlight__name {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(222, 221, 221);
+}
+.higlight__name--input {
+    background-color: rgb(247, 247, 247);
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid rgb(201, 200, 200);
+    padding: 10px;
+}
+.higlight__button {
+    background-color: white;
+    border: none;
+    padding: 1rem;
+    /* border-top: 1px solid rgb(201, 200, 200); */
+    /* text-align: center; */
+}

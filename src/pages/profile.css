@@ -1,5 +1,6 @@
-.profile__bar {
-    padding: 10%;
+.profile {
+    padding: 0 80px;
+    /* background-color: blue; */
 }
 .profile__header--userInfo--picture {
     height: 150px;
@@ -37,4 +38,20 @@
     border: 1px solid #c7c6c6;
     border-radius: 50px;
     color: #c7c6c6;
+}
+.profile__footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: #888888;
+
+    border-top: 1px solid rgb(195, 195, 195);
+    font-size: small;
+}
+
+.profile__footer--tabs {
+    margin-left: 2rem;
+}
+.profile__footer--tabs > span {
+    margin-left: 1rem;
 }

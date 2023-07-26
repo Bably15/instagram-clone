@@ -44,7 +44,7 @@ const Suggestions = () => {
                     <span>{profile.username}</span>
                 </div>
 
-                <button>switch</button>
+                <button className="sidebar__functions"> switch</button>
             </div>
             <div className="profiles__sidebar--title">
                 <h5>Suggested for you</h5>
@@ -62,7 +62,9 @@ const Suggestions = () => {
                             <span>{item.username}</span>
                         </div>
                         <div>
-                            <a href="#follow">Follow</a>
+                            <a href="#follow" className="sidebar__functions">
+                                Follow
+                            </a>
                         </div>
                     </div>
                 ))}

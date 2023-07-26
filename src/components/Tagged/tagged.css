@@ -1,14 +1,9 @@
-.post {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.post__items {
+.tagged__items {
     width: 31%;
     padding: 2px;
     height: 300px;
 }
-.post__items--image {
+.tagged__image {
     object-fit: cover;
     height: 300px;
     width: 100%;

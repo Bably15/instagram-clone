@@ -1,5 +1,5 @@
 import logo from "../../assets/images/logo.png";
-import Lily from "../../assets/images/Lily.jpeg";
+import { useState } from "react";
 import "./sidebar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -11,9 +11,15 @@ import {
     faUser as regularUser,
     // faMagnifyingGlass as regularMagnifyingGlass,
 } from "@fortawesome/free-regular-svg-icons";
+import Searchbar from "../Searchbar";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+    const [openSearchbar, setOpenSearchbar] = useState(false);
+    const handlerOnClick = () => {
+        setOpenSearchbar(true);
+        console.log("heello");
+    };
     const sidebarItems = [
         {
             icon: faHouse,
@@ -23,7 +29,7 @@ const Sidebar = () => {
         {
             icon: faMagnifyingGlass,
             title: "Search",
-            path: "/search",
+            // path: "/search",
         },
         {
             icon: regularCompass,
@@ -72,11 +78,19 @@ const Sidebar = () => {
                                 <FontAwesomeIcon
                                     icon={item.icon}
                                     className="sidebar__items--icons"
+                                    onClick={
+                                        item.title === "Search"
+                                            ? () => handlerOnClick(item.title)
+                                            : null
+                                    }
                                 />
+                                
+                             
                                 <span className="sidebar--title">
                                     {" "}
                                     {item.title}
                                 </span>
+                                {openSearchbar && <Searchbar />}
                             </li>
                         </ul>
                     </Link>

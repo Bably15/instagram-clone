@@ -1,0 +1,38 @@
+.saved {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.saved__items {
+    width: 31%;
+    padding: 2px;
+    height: 300px;
+    position: relative;
+}
+.saved__items--image {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7)
+    ); /* Adjust the gradient colors and transparency */
+    z-index: 1;
+}
+.text-overlay {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 10px; /* Adjust the distance from the left */
+    color: #fff; /* Text color */
+    font-size: 18px; /* Adjust the font size */
+    font-weight: bold; /* You can customize font styles as needed */
+    z-index: 2; /* Make sure the text is above the gradient overlay */
+}
